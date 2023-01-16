@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/lab": "^4.0.0-alpha.61",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "^13.0.2",
