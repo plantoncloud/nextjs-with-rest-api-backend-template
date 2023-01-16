@@ -1,0 +1,20 @@
+container_port: 3000
+service_port: 80
+
+replicas: 1
+
+container_resource_limits:
+  cpu: 1
+  memory: 1Gi
+container_resource_requests:
+  cpu: 50m
+  memory: 256Mi
+
+#key value pairs of environment variables. key is the environment variable and the value is the value of environment variable.
+
+env_vars:
+  BACKEND_API_BASE_URL: {{cookiecutter.backend_api_base_url}}
+
+#key value pairs of secret environment variables. key is the environment variable and the value is the id of the secret in the google secrets manager.
+#ex: DB_PASSWORD: mycompany-abc-dev-db-password
+secrets: {}

@@ -1,0 +1,5 @@
+{
+    "project_slug": "todo-app",
+    "app_name": "Todo App",
+    "backend_api_base_url": "https://jsonplaceholder.typicode.com/posts"
+}
