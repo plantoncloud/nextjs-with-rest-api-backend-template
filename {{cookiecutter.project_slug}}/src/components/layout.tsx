@@ -1,18 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
+import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
+import { Box } from "@material-ui/core";
 
 const name = '{{cookiecutter.app_name}}'
 export const siteTitle = '{{cookiecutter.app_name}}'
 
 export default function Layout({
   children,
-  home
+  home,
 }: {
-  children: React.ReactNode
-  home?: boolean
+  children: React.ReactNode;
+  home?: boolean;
 }) {
   return (
     <div className={styles.container}>
@@ -49,7 +51,7 @@ export default function Layout({
             <Link href="/">
               <Image
                 priority
-                src="/images/profile.jpg"
+                src="/images/planton-cloud-logo.svg"
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
@@ -67,9 +69,13 @@ export default function Layout({
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link href="/">
+            <Box alignItems="center" display="flex">
+              <KeyboardBackspaceIcon fontSize="small" /> Back to home
+            </Box>
+          </Link>
         </div>
       )}
     </div>
-  )
+  );
 }

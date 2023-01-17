@@ -50,3 +50,7 @@
 .lightText {
   color: #666;
 }
+
+.buttonsContainer {
+  margin: 1rem 0;
+}
